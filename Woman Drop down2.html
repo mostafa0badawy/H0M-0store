@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>H&M store</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">  <!--icons-->
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">  <!---swaipar slayder-->
+
+  <!-- Template Main CSS File -->
+<style>
+
+
+@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i');
+body{
+  font-family: 'Muli', sans-serif;
+  background:#ddd;
+}
+.shell{
+  padding:80px 0;
+}
+.wsk-cp-product{
+  background:#fff;
+  padding:15px;
+  border-radius:6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  position:relative;
+  margin:20px auto;
+}
+.wsk-cp-img{
+  position:absolute;
+  top:5px;
+  left:50%;
+  transform:translate(-50%);
+  -webkit-transform:translate(-50%);
+  -ms-transform:translate(-50%);
+  -moz-transform:translate(-50%);
+  -o-transform:translate(-50%);
+  -khtml-transform:translate(-50%);
+  width: 100%;
+  padding: 15px;
+  transition: all 0.2s ease-in-out;
+}
+.wsk-cp-img img{
+  width:100%;
+  transition: all 0.2s ease-in-out;
+  border-radius:6px;
+}
+.wsk-cp-product:hover .wsk-cp-img{
+  top:-40px;
+}
+.wsk-cp-product:hover .wsk-cp-img img{
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.wsk-cp-text{
+  padding-top:150%;
+}
+.wsk-cp-text .category{
+  text-align:center;
+  font-size:12px;
+  font-weight:bold;
+  padding:5px;
+  margin-bottom:45px;
+  position:relative;
+  transition: all 0.2s ease-in-out;
+}
+.wsk-cp-text .category > *{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  -khtml-transform: translate(-50%,-50%);
+    
+}
+.wsk-cp-text .category > span{
+  padding: 12px 30px;
+  border: 1px solid #313131;
+  background:#212121;
+  color:#fff;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  border-radius:27px;
+  transition: all 0.05s ease-in-out;
+  
+}
+.wsk-cp-product:hover .wsk-cp-text .category > span{
+  border-color:#ddd;
+  box-shadow: none;
+  padding: 11px 28px;
+}
+.wsk-cp-product:hover .wsk-cp-text .category{
+  margin-top: 0px;
+}
+.wsk-cp-text .title-product{
+  text-align:center;
+}
+.wsk-cp-text .title-product h3{
+  font-size:20px;
+  font-weight:bold;
+  margin:15px auto;
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  width:100%;
+}
+.wsk-cp-text .description-prod p{
+  margin:0;
+}
+/* Truncate */
+.wsk-cp-text .description-prod {
+  text-align:center;
+  width: 100%;
+  height:62px;
+  overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  margin-bottom:15px;
+}
+.card-footer{
+  padding: 25px 0 5px;
+  border-top: 1px solid #ddd;
+}
+.card-footer:after, .card-footer:before{
+  content:'';
+  display:table;
+}
+.card-footer:after{
+  clear:both;
+}
+
+.card-footer .wcf-left{
+  float:left;
+  
+}
+
+.card-footer .wcf-right{
+  float:right;
+}
+
+.price{
+  font-size:18px;
+  font-weight:bold;
+}
+
+a.buy-btn{
+  display:block;
+  color:#212121;
+  text-align:center;
+  font-size: 18px;
+  width:35px;
+  height:35px;
+  line-height:35px;
+  border-radius:50%;
+  border:1px solid #212121;
+  transition: all 0.2s ease-in-out;
+}
+a.buy-btn:hover , a.buy-btn:active, a.buy-btn:focus{
+  border-color: #FF9800;
+  background: #FF9800;
+  color: #fff;
+  text-decoration:none;
+}
+.wsk-btn{
+  display:inline-block;
+  color:#212121;
+  text-align:center;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+  border-color: #FF9800;
+  background: #FF9800;
+  padding:12px 30px;
+  border-radius:27px;
+  margin: 0 5px;
+}
+.wsk-btn:hover, .wsk-btn:focus, .wsk-btn:active{
+  text-decoration:none;
+  color:#fff;
+}  
+.red{
+  color:#F44336;
+  font-size:22px;
+  display:inline-block;
+  margin: 0 5px;
+}
+@media screen and (max-width: 991px) {
+  .wsk-cp-product{
+    margin:40px auto;
+  }
+  .wsk-cp-product .wsk-cp-img{
+  top:-40px;
+}
+.wsk-cp-product .wsk-cp-img img{
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+  .wsk-cp-product .wsk-cp-text .category > span{
+  border-color:#ddd;
+  box-shadow: none;
+  padding: 11px 28px;
+}
+.wsk-cp-product .wsk-cp-text .category{
+  margin-top: 0px;
+}
+
+}
+
+
+
+
+</style>
+</head>
+
+
+<body >
+
+  <link rel="stylesheet" href="style.css">
+  <!-- ======= Top Bar ======= -->
+<section id="topbar" class="d-flex align-items-center">
+  <div class="container d-flex justify-content-center justify-content-md-between">
+    
+
+    <div style="margin-left: 25%;" class="cta d-none d-md-flex align-items-center">
+      <a href="Sign in.html" class="scrollto">create an account</a>
+    </div>
+    <div class="cta d-none d-md-flex align-items-center">
+      <a href="Sign in.html" class="scrollto">Sign in</a>
+    </div>
+    <div class="cta d-none d-md-flex align-items-center">
+      <a href="#about" class="scrollto">Find Store</a>
+    </div>
+    <div style="margin-right: 30%;" class="cta d-none d-md-flex align-items-center">
+      <a href="arbic home page.html" class="scrollto">العربيه</a>
+    </div>
+    <div >
+      <a href="cart.html">  <img  style="margin-left: 10%;" src="conversation-svgrepo-com.svg" alt=""  width="55px" height="50px">
+      </a>
+      </div>      
+
+</section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="Home page.html"><img src="https://eg.hm.com/themes/custom/transac/alshaya_hnm/site-logo.svg?tY6kjl" alt=""></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+      
+
+  
+
+     <!---start navbar--> 
+      <nav id="navbar" class="navbar">
+        <ul>
+<li ><a style="color: #C9152E;"class="nav-link scrollto active" href="index.html">H&M Home</a></li>
+
+<!--- MEN drob dawn-->
+
+<li class="dropdown"><a href="Men.html"><span>Men</span> <i class="bi bi-chevron-down"></i></a>
+  <ul>
+    <li><a href="Men Drop down1.html">SHIRTS</a></li>
+    <li class="dropdown"><a href="Men Drop down2.html"><span>Smart Look</span> <i class="bi bi-chevron-right"></i></a>
+      <ul>
+        <li><a href="Men Drop down1.html">Deep Drop Down 1</a></li>
+        <li><a href="#">Deep Drop Down 2</a></li>
+      
+      </ul>
+    </li>
+  </ul>
+</li>   
+<!---end MEN drob dawn-->
+
+
+
+
+
+<!---kaids drob dawn-->
+
+<li class="dropdown"><a href="kaids.html"><span>Kaids</span> <i class="bi bi-chevron-down"></i></a>
+  <ul>
+    <li><a href="Kaids Drop down1.html">CLOTHING</a></li>
+    <li class="dropdown"><a href="Kaids Drop down2.html"><span>SPORTSWEAR</span> <i class="bi bi-chevron-right"></i></a>
+      <ul>
+        <li><a href="#">Deep Drop Down 1</a></li>
+        <li><a href="#">Deep Drop Down 2</a></li>
+
+      </ul>
+    </li>
+ 
+  </ul>
+</li>   
+<!---end kaids drob dawn-->
+
+
+
+
+<!---woman drob dawn-->
+
+<li class="dropdown"><a href="Woman.html"><span>Woman</span> <i class="bi bi-chevron-down"></i></a>
+  <ul>
+    <li><a href="Woman Drop down1.html">GOING OUT</a></li>
+    <li class="dropdown"><a href="Woman Drop down2.html"><span>DRESSES</span> <i class="bi bi-chevron-right"></i></a>
+      <ul>
+        <li><a href="#">Deep Drop Down 1</a></li>
+        <li><a href="#">Deep Drop Down 2</a></li>
+
+      </ul>
+    </li>
+
+  </ul>
+</li>   
+<!--- end woman drob dawn-->
+
+<li><a class="nav-link scrollto" href="Blog & MAGAZINE.html">Blog & MAGAZINE</a></li>
+<li><a class="nav-link scrollto" href="About us.html">About</a></li>
+
+          <li><a class="nav-link scrollto" href="conact page.html">Contact</a></li>
+        </ul>
+</nav><!-- .navbar -->
+
+  </div>
+
+
+
+ 
+  </header><!-- End Header -->
+
+    <h1 style="text-align: center;">DRESSES</h1>
+
+    <div class="container text-center">
+      
+        
+        <div class="shell">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img">
+                    <img src="https://eg.hm.com/assets/styles/HNM/15410077/509cb9255fa25d3568d35013729a4d793ce7d53d/1/image-thumb__4450097__product_listing/509cb9255fa25d3568d35013729a4d793ce7d53d.jpg" alt="Product" class="img-responsive" />
+                  </div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                    </div>
+                    <div class="title-product">
+                      <h3>Regular Fit Oxford shirt</h3>
+                      
+
+
+                    </div>
+                    <div class="description-prod">
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">EGP 999.00</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://eg.hm.com/assets/styles/HNM/15143388/501011eef840229dedba87b984c562851058ce87/1/image-thumb__4318688__product_listing/501011eef840229dedba87b984c562851058ce87.jpg"  class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                    </div>
+                    <div class="title-product">
+                      <h3>Regular Fit Shirt jacket</h3>
+                      
+
+                    </div>
+                    <div class="description-prod">
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">EGP 749.00</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://eg.hm.com/assets/styles/HNM/15787824/cb311d798fd3981cea717a55ff30e8e511b22e1b/1/image-thumb__4555065__product_listing/cb311d798fd3981cea717a55ff30e8e511b22e1b.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                    </div>
+                    <div class="title-product">
+                      <h3>Regular Fit Corduroy shirt</h3>
+                      
+                    </div>
+                    <div class="description-prod">
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">EGP 749.00</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://eg.hm.com/assets/styles/HNM/15737105/ba870c1af77fcbe96566ad858dfceec90a73cc83/1/image-thumb__4538226__product_listing/ba870c1af77fcbe96566ad858dfceec90a73cc83.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                    </div>
+                    <div class="title-product">
+                      <h3>Relaxed Fit Flannel shirt</h3>
+                      
+
+                    </div>
+                    <div class="description-prod">
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">EGP 999.00</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="shell">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img">
+                    <img src="https://eg.hm.com/assets/styles/HNM/16469104/14daaa878cba869906b4a405b25b7a89afdb87ff/2/image-thumb__4797870__product_listing/83c631f603207eac59812783c0cf29b5560ca3a7.jpg" alt="Product" class="img-responsive" />
+                  </div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                    </div>
+                    <div class="title-product">
+                      <h3>Regular Fit Oxford shirt</h3>
+                      
+
+
+                    </div>
+                    <div class="description-prod">
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">EGP 999.00</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://eg.hm.com/assets/styles/HNM/15248577/9482312bb1e26950d2b66f7069a7bf289d749661/1/image-thumb__4436397__product_listing/9482312bb1e26950d2b66f7069a7bf289d749661.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                    </div>
+                    <div class="title-product">
+                      <h3>Regular Fit Shirt jacket</h3>
+                      
+
+                    </div>
+                    <div class="description-prod">
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">EGP 749.00</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://eg.hm.com/assets/styles/HNM/14320096/3802c0c2d0dd790607426e5260f404f76c42cf15/2/image-thumb__3256770__product_listing/1b940fefdfc6f2baf63c846e57251b4d72c6700f.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                    </div>
+                    <div class="title-product">
+                      <h3>Regular Fit Corduroy shirt</h3>
+                      
+                    </div>
+                    <div class="description-prod">
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">EGP 749.00</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://eg.hm.com/assets/styles/HNM/14320328/d01c063fbe4fa16bcf586f3f9f72ff94ed66eef9/2/image-thumb__3261364__product_listing/ec1835508d85a73d54111caed8669d358b2862e1.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                    </div>
+                    <div class="title-product">
+                      <h3>Relaxed Fit Flannel shirt</h3>
+                      
+
+                    </div>
+                    <div class="description-prod">
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">EGP 999.00</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+               
+      
+
+</body>
+</html>
