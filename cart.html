@@ -1,0 +1,543 @@
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>H&M store</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">  <!--icons-->
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">  <!---swaipar slayder-->
+  
+    <!-- Template Main CSS File -->
+
+
+
+  <style>
+
+
+/*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+#topbar {
+  font-size: 14px;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.8);
+  height: 40px;
+}
+
+
+
+#topbar .contact-info i a,
+#topbar .contact-info i span {
+  padding-left: 5px;
+  color: #fff;
+}
+
+#topbar .contact-info i a {
+  line-height: 0;
+  transition: 0.3s;
+}
+
+
+#topbar .cta a {
+  color: black;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+
+/*--------------------------------------------------------------
+# ************************************************************* الخط الي بيظهر تحت الكلمات
+--------------------------------------------------------------*/
+
+
+a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+@media screen and (max-height: 300px) {
+	ul {
+		margin-top: 40px;
+	}
+}
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  height: 70px;
+  transition: all 0.5s;
+  background: #fff;
+}
+
+
+
+#header .logo h1 {
+  font-size: 28px;
+  margin: 0;
+  line-height: 0;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+#header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
+}
+
+.scrolled-offset {
+  margin-top: 70px;
+}
+
+
+/*--------------------------------------------------------------
+# Drop Down  Menu
+--------------------------------------------------------------*/
+
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #C9152E;
+}
+
+.navbar .getstarted,
+.navbar .getstarted:focus {
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.navbar .getstarted:hover,
+.navbar .getstarted:focus:hover {
+  color: #fff;
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #C9152E;
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
+}
+
+/*--------------------------------------------------------------
+# 
+--------------------------------------------------------------*/
+
+
+
+@media (min-width: 1025px) {
+.h-custom {
+height: 100vh !important;
+}
+}
+  </style>
+  </head>
+  
+  
+  <body style="background-color:#897577;">
+   
+
+
+
+  <!-- ======= Top Bar ======= -->
+<section id="topbar" class="d-flex align-items-center">
+  <div class="container d-flex justify-content-center justify-content-md-between">
+    
+
+    <div style="margin-left: 25%;" class="cta d-none d-md-flex align-items-center">
+      <a href="Sign in.html" class="scrollto">create an account</a>
+    </div>
+    <div class="cta d-none d-md-flex align-items-center">
+      <a href="Sign in.html" class="scrollto">Sign in</a>
+    </div>
+    <div class="cta d-none d-md-flex align-items-center">
+      <a href="#about" class="scrollto">Find Store</a>
+    </div>
+    <div style="margin-right: 30%;" class="cta d-none d-md-flex align-items-center">
+      <a href="arbic home page.html" class="scrollto">العربيه</a>
+    </div>
+    <div >
+      <a href="cart.html">  <img  style="margin-left: 10%;" src="conversation-svgrepo-com.svg" alt=""  width="55px" height="50px">
+      </a>
+      </div>      
+
+</section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="Home page.html"><img src="https://eg.hm.com/themes/custom/transac/alshaya_hnm/site-logo.svg?tY6kjl" alt=""></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+      
+
+  
+
+     <!---start navbar--> 
+      <nav id="navbar" class="navbar">
+        <ul>
+<li ><a style="color: #C9152E;"class="nav-link scrollto active" href="index.html">H&M Home</a></li>
+
+<!--- MEN drob dawn-->
+
+<li class="dropdown"><a href="Men.html"><span>Men</span> <i class="bi bi-chevron-down"></i></a>
+  <ul>
+    <li><a href="Men Drop down1.html">SHIRTS</a></li>
+    <li class="dropdown"><a href="Men Drop down2.html"><span>Smart Look</span> <i class="bi bi-chevron-right"></i></a>
+      <ul>
+        <li><a href="Men Drop down1.html">Deep Drop Down 1</a></li>
+        <li><a href="#">Deep Drop Down 2</a></li>
+      
+      </ul>
+    </li>
+  </ul>
+</li>   
+<!---end MEN drob dawn-->
+
+
+
+
+
+<!---kaids drob dawn-->
+
+<li class="dropdown"><a href="kaids.html"><span>Kaids</span> <i class="bi bi-chevron-down"></i></a>
+  <ul>
+    <li><a href="Kaids Drop down1.html">Drop Down 1</a></li>
+    <li class="dropdown"><a href="Kaids Drop down2.html"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+      <ul>
+        <li><a href="#">Deep Drop Down 1</a></li>
+        <li><a href="#">Deep Drop Down 2</a></li>
+
+      </ul>
+    </li>
+ 
+  </ul>
+</li>   
+<!---end kaids drob dawn-->
+
+
+
+
+<!---woman drob dawn-->
+
+<li class="dropdown"><a href="Woman.html"><span>Woman</span> <i class="bi bi-chevron-down"></i></a>
+  <ul>
+    <li><a href="Woman Drop down1.html">GOING OUT</a></li>
+    <li class="dropdown"><a href="Woman Drop down2.html"><span>DRESSES</span> <i class="bi bi-chevron-right"></i></a>
+      <ul>
+        <li><a href="#">Deep Drop Down 1</a></li>
+        <li><a href="#">Deep Drop Down 2</a></li>
+
+      </ul>
+    </li>
+
+  </ul>
+</li>   
+<!--- end woman drob dawn-->
+
+          <li><a class="nav-link scrollto" href="Blog & MAGAZINE.html">Blog & MAGAZINE</a></li>
+          <li><a class="nav-link scrollto" href="About us.html">About</a></li>
+
+          <li><a class="nav-link scrollto" href="conact page.html">Contact</a></li>
+        </ul>
+</nav><!-- .navbar -->
+
+  </div>
+
+
+
+ 
+  </header><!-- End Header -->
+
+
+  
+    <section class="h-100 h-custom">
+        <div class="container h-100 py-5">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+      
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="h5">Shopping Bag</th>
+                      <th scope="col">Format</th>
+                      <th scope="col">Quantity</th>
+                      <th scope="col">Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <div class="d-flex align-items-center">
+                          <img src="https://eg.hm.com/assets/styles/HNM/14617559/79ff3066829bd22002c8d8469a603744f0f41e88/1/image-thumb__3596720__product_listing/79ff3066829bd22002c8d8469a603744f0f41e88.jpg" class="img-fluid rounded-3"
+                            style="width: 120px;" alt="Book">
+                          <div class="flex-column ms-4">
+                            <p class="mb-2">Thinking, Fast and Slow</p>
+                            <p class="mb-0">Daniel Kahneman</p>
+                          </div>
+                        </div>
+                      </th>
+                      <td class="align-middle">
+                        <p class="mb-0" style="font-weight: 500;">Digital</p>
+                      </td>
+                      <td class="align-middle">
+                        <div class="d-flex flex-row">
+                          <button class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fas fa-minus"></i>
+                          </button>
+      
+                          <input id="form1" min="0" name="quantity" value="2" type="number"
+                            class="form-control form-control-sm" style="width: 50px;" />
+      
+                          <button class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <p class="mb-0" style="font-weight: 500;">$9.99</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="border-bottom-0">
+                        <div class="d-flex align-items-center">
+                          <img src="https://eg.hm.com/assets/styles/HNM/16875968/cc97845ec2b2fb9e4f1423bd17491449e870a95d/1/image-thumb__4960794__product_listing/cc97845ec2b2fb9e4f1423bd17491449e870a95d.jpg" class="img-fluid rounded-3"
+                            style="width: 120px;" alt="Book">
+                          <div class="flex-column ms-4">
+                            <p class="mb-2">Homo Deus: A Brief History of Tomorrow</p>
+                            <p class="mb-0">Yuval Noah Harari</p>
+                          </div>
+                        </div>
+                      </th>
+                      <td class="align-middle border-bottom-0">
+                        <p class="mb-0" style="font-weight: 500;">Paperback</p>
+                      </td>
+                      <td class="align-middle border-bottom-0">
+                        <div class="d-flex flex-row">
+                          <button class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fas fa-minus"></i>
+                          </button>
+      
+                          <input id="form1" min="0" name="quantity" value="1" type="number"
+                            class="form-control form-control-sm" style="width: 50px;" />
+      
+                          <button class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="align-middle border-bottom-0">
+                        <p class="mb-0" style="font-weight: 500;">$13.50</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+      
+              <div class="card shadow-2-strong mb-5 mb-lg-0" style="border-radius: 16px;">
+                <div class="card-body p-4">
+      
+             
+                    <div class="col-lg-4 col-xl-3">
+                      <div class="d-flex justify-content-between" style="font-weight: 500;">
+                        <p class="mb-2">Subtotal</p>
+                        <p class="mb-2">$23.49</p>
+                      </div>
+      
+                      <div class="d-flex justify-content-between" style="font-weight: 500;">
+                        <p class="mb-0">Shipping</p>
+                        <p class="mb-0">$2.99</p>
+                      </div>
+      
+                      <hr class="my-4">
+      
+                      <div class="d-flex justify-content-between mb-4" style="font-weight: 500;">
+                        <p class="mb-2">Total (tax included)</p>
+                        <p class="mb-2">$26.48</p>
+                      </div>
+      
+                      <button type="button" class="btn btn-primary btn-block btn-lg">
+                        <div class="d-flex justify-content-between">
+                          <a class="btn btn-primary" href="check out page .html" role="button">Go to check out page </a>
+                          
+                        </div>
+                      </button>
+      
+                    </div>
+
+                  </div>
+                        
+
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </div>      
+
+      </section>
+ 
+  
+
+  
+  
+  
+  
+  
+  
+  </body>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

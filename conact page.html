@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+
+#topbar {
+  font-size: 14px;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.8);
+  height: 40px;
+}
+
+
+
+#topbar .contact-info i a,
+#topbar .contact-info i span {
+  padding-left: 5px;
+  color: #fff;
+}
+
+#topbar .contact-info i a {
+  line-height: 0;
+  transition: 0.3s;
+}
+
+
+#topbar .cta a {
+  color: black;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+
+/*--------------------------------------------------------------
+# ************************************************************* الخط الي بيظهر تحت الكلمات
+--------------------------------------------------------------*/
+
+
+a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+@media screen and (max-height: 300px) {
+	ul {
+		margin-top: 40px;
+	}
+}
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  height: 70px;
+  transition: all 0.5s;
+  background: #fff;
+}
+
+
+
+#header .logo h1 {
+  font-size: 28px;
+  margin: 0;
+  line-height: 0;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+#header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
+}
+
+.scrolled-offset {
+  margin-top: 70px;
+}
+
+
+/*--------------------------------------------------------------
+# Drop Down  Menu
+--------------------------------------------------------------*/
+
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #C9152E;
+}
+
+.navbar .getstarted,
+.navbar .getstarted:focus {
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.navbar .getstarted:hover,
+.navbar .getstarted:focus:hover {
+  color: #fff;
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #C9152E;
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
+}
+
+div.d11{
+  position: relative;
+  width: 100%;
+  height: 150%;
+text-align: center;
+background-color:#7F7F7F ;
+text-decoration: none;
+  }
+
+div.r1{
+
+position: absolute;
+width: 2%;
+height: 40%;
+margin-top: 5%;
+padding: 10px 5px;
+background-color:#7F7F7F ;
+text-decoration: none;
+
+
+}
+
+div.r2{
+
+position: absolute;
+width: 8%;
+height: 40%;
+margin-top: 5%;
+margin-left: 21%;
+text-align: left;
+padding: 10px 5px;
+text-decoration: none;
+
+}
+
+div.r3{
+
+position: absolute;
+width: 9%;
+height: 40%;
+margin-top: 5%;
+margin-left: 45%;
+text-align: left;
+padding: 10px 5px;
+text-decoration: none;
+
+}
+
+div.r4{
+
+  position: absolute;
+  width: 15%;
+  height: 20%;
+  margin-top: 5%;
+  margin-left: 80%;
+  text-align: left;
+  padding: 10px 5px;
+  text-decoration: none;
+
+  }
+
+  .input1[type=text], select {
+      width: 65%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    
+    
+   
+
+    div.r5{
+
+      position: absolute;
+      width: 25%;
+      height: 8%;
+      margin-top: 18%;
+      margin-left: 70%;
+      text-align: left;
+      padding: 10px 5px;
+      }
+    
+      .button3 {
+          background-color:black; 
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        
+        .button3 {font-size: 10px;}
+       
+        
+
+        div.r6{
+
+          position: absolute;
+          width: 25%;
+          height: 8%;
+          margin-top: 37%;
+          margin-left: 36%;
+          text-align: left;
+          padding: 10px 5px;
+          text-align: center;
+          }
+
+          div.r7{
+
+              position: absolute;
+              width: 25%;
+              height: 8%;
+              margin-top: 47%;
+              margin-left: 36%;
+              text-align: left;
+              padding: 10px 5px;
+              text-align: center;
+              }
+              div.r8{
+
+                  position: absolute;
+                  width: 25%;
+                  height: 8%;
+                  margin-top: 52%;
+                  margin-left: 36%;
+                  text-align: left;
+                  padding: 10px 5px;
+                  text-align: center;
+                 }
+        
+
+
+
+  </style>
+</head>
+
+<body class="index-page" data-bs-spy="scroll" d>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+ <!-- ======= Top Bar ======= -->
+
+  
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+  
+        <div class="logo">
+          <h1><a href="Home page.html"><img src="https://eg.hm.com/themes/custom/transac/alshaya_hnm/site-logo.svg?tY6kjl" alt=""></a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+        
+  
+    
+  
+       <!---start navbar--> 
+        <nav id="navbar" class="navbar">
+          <ul>
+  <li ><a style="color: #C9152E;"class="nav-link scrollto active" href="index.html">H&M Home</a></li>
+  
+  <!--- MEN drob dawn-->
+  
+  <li class="dropdown"><a href="Men.html"><span>Men</span> <i class="bi bi-chevron-down"></i></a>
+    <ul>
+      <li><a href="Men Drop down1.html">SHIRTS</a></li>
+      <li class="dropdown"><a href="Men Drop down2.html"><span>Smart Look</span> <i class="bi bi-chevron-right"></i></a>
+        <ul>
+          <li><a href="Men Drop down1.html">Deep Drop Down 1</a></li>
+          <li><a href="#">Deep Drop Down 2</a></li>
+        
+        </ul>
+      </li>
+    </ul>
+  </li>   
+  <!---end MEN drob dawn-->
+  
+  
+  
+  
+  
+  <!---kaids drob dawn-->
+  
+  <li class="dropdown"><a href="kaids.html"><span>Kaids</span> <i class="bi bi-chevron-down"></i></a>
+    <ul>
+      <li><a href="Kaids Drop down1.html">CLOTHING</a></li>
+      <li class="dropdown"><a href="Kaids Drop down2.html"><span>SPORTSWEAR</span> <i class="bi bi-chevron-right"></i></a>
+        <ul>
+          <li><a href="#">Deep Drop Down 1</a></li>
+          <li><a href="#">Deep Drop Down 2</a></li>
+  
+        </ul>
+      </li>
+   
+    </ul>
+  </li>   
+  <!---end kaids drob dawn-->
+  
+  
+  
+  
+  <!---woman drob dawn-->
+  
+  <li class="dropdown"><a href="Woman.html"><span>Woman</span> <i class="bi bi-chevron-down"></i></a>
+    <ul>
+      <li><a href="Woman Drop down1.html">GOING OUT</a></li>
+      <li class="dropdown"><a href="Woman Drop down2.html"><span>DRESSES</span> <i class="bi bi-chevron-right"></i></a>
+        <ul>
+          <li><a href="#">Deep Drop Down 1</a></li>
+          <li><a href="#">Deep Drop Down 2</a></li>
+  
+        </ul>
+      </li>
+  
+    </ul>
+  </li>   
+  <!--- end woman drob dawn-->
+  
+  <li><a class="nav-link scrollto" href="Blog & MAGAZINE.html">Blog & MAGAZINE</a></li>
+  <li><a class="nav-link scrollto" href="About us.html">About</a></li>
+  
+            <li><a class="nav-link scrollto" href="conact page.html">Contact</a></li>
+          </ul>
+  </nav><!-- .navbar -->
+  
+    </div>
+  
+  
+  
+   
+    </header><!-- End Header -->
+   
+
+      
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav><!-- End Nav Menu -->
+
+
+    </div>
+  </header><!-- End Header -->
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- Contact Section - Home Page -->
+    <section id="contact" class="contact">
+
+      <!--  Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="200">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>New York, NY 535022</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>+1 5589 55488 55</p>
+                  <p>+1 6678 254445 41</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="400">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>info@example.com</p>
+                  <p>contact@example.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="500">
+                  <i class="bi bi-clock"></i>
+                  <h3>Open Hours</h3>
+                  <p>Monday - Friday</p>
+                  <p>9:00AM - 05:00PM</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- End Contact Section -->
+
+  </main>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7078416.279925868!2d21.2604756!3d29.972016!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145851182384e539%3A0xb89984fcaa6ed595!2zSCZN!5e0!3m2!1sen!2seg!4v1693442538669!5m2!1sen!2seg" width="1500" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <!-- Scroll Top Button -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- ======= Footer ======= -->
+    <div class="d11 " style="color: black;" >
+
+        <div class="r1">
+        
+        <h6 style="font-size: large;">SHOP</h6>
+        <a style="text-decoration: underline;" href="Woman.html" target="_blank">Women</a> 
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Divided</a> 
+        <a style="text-decoration: underline;" href="Men.html" target="_blank">Men</a> 
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Baby</a> 
+        <a style="text-decoration: underline;" href="kaids.html" target="_blank">Kids</a> 
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">H&M Home</a> 
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Sport</a> 
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Sale</a> 
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Sustainability</a>  </div>
+        
+        
+        <div class="r2">
+            <h6 style="font-size: large;">CORPORATE INFO</h6>
+            <a style="text-decoration: underline;" href="html_images.asp" target="_blank">About Us</a>
+            <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Delivery Information</a>
+            <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Terms and Conditions of Sale</a>
+            <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Website Terms & Conditions</a>
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Privacy Policy</a>
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Returns & Refunds</a>   </div>
+        
+        <div class="r3">
+            <h6 style="font-size: large;">CUSTOMER SERVICE</h6>
+        
+        
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">FAQs</a>
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Contact Us</a>
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Connect Via WhatsApp</a>
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Sitemap</a>
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Stores</a>
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">H&M Home Furniture & Lighting</a>
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">eGift Cards</a>    </div>
+        
+        <div class="r4">
+        
+            <h6 style="font-size: large;"> NEWSLETTER</h6>
+            <p>    be the first to know about our newest arrivals, special offers and store events near you.</p>  </div>
+        
+        <div class="r5">
+         <form action="/action_page.php">
+            
+                <input class="input1" type="text" id="fname" name="firstname" placeholder="enter Your Email address">
+            
+                <button class="button button3">Sugin in</button>
+             
+             
+              </form>   </div>
+    
+    
+    
+    <div class="r6">
+    <p>Customer Service</p>
+    <p>For Egypt 02-24803822</p>
+    <p>We are open Saturday to Thursday 8 am to 9 pm & Friday 12 pm to 9 pm (Egypt local time, GMT +3)</p>
+    <p></p>  </div>
+       
+        
+    <div class="r7">
+    
+    <img src="file:///C:/Users/Almohandes.Computer/Downloads/facebook-svgrepo-com%20(1).svg" alt="" width="50px" height="50px">   
+    <img src="file:///C:/Users/Almohandes.Computer/Downloads/instagram-svgrepo-com.svg" alt="" width="50px" height="50px">   
+    <img src="file:///C:/Users/Almohandes.Computer/Downloads/twitter-svgrepo-com.svg" alt="" width="50px" height="50px">   </div>
+            
+    <div class="r8">
+    <p>© H&M's business concept is to offer fashion and quality at the best price in a sustainable way. H&M has since it was founded in 1947 grown into one of the world's leading fashion companies. The content of this site is copyright-protected and is the property of H&M Hennes & Mauritz AB.</p> </div>
+          
+      
+        </div>
+    
+         <!-- ======= end Footer ======= -->
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

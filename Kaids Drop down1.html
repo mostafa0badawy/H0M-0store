@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>H&M store</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">  <!--icons-->
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">  <!---swaipar slayder-->
+
+  <!-- Template Main CSS File -->
+<style>
+
+
+@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i');
+body{
+  font-family: 'Muli', sans-serif;
+  background:#ddd;
+}
+.shell{
+  padding:80px 0;
+}
+.wsk-cp-product{
+  background:#fff;
+  padding:15px;
+  border-radius:6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  position:relative;
+  margin:20px auto;
+}
+.wsk-cp-img{
+  position:absolute;
+  top:5px;
+  left:50%;
+  transform:translate(-50%);
+  -webkit-transform:translate(-50%);
+  -ms-transform:translate(-50%);
+  -moz-transform:translate(-50%);
+  -o-transform:translate(-50%);
+  -khtml-transform:translate(-50%);
+  width: 100%;
+  padding: 15px;
+  transition: all 0.2s ease-in-out;
+}
+.wsk-cp-img img{
+  width:100%;
+  transition: all 0.2s ease-in-out;
+  border-radius:6px;
+}
+.wsk-cp-product:hover .wsk-cp-img{
+  top:-40px;
+}
+.wsk-cp-product:hover .wsk-cp-img img{
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.wsk-cp-text{
+  padding-top:150%;
+}
+.wsk-cp-text .category{
+  text-align:center;
+  font-size:12px;
+  font-weight:bold;
+  padding:5px;
+  margin-bottom:45px;
+  position:relative;
+  transition: all 0.2s ease-in-out;
+}
+.wsk-cp-text .category > *{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  -khtml-transform: translate(-50%,-50%);
+    
+}
+.wsk-cp-text .category > span{
+  padding: 12px 30px;
+  border: 1px solid #313131;
+  background:#212121;
+  color:#fff;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  border-radius:27px;
+  transition: all 0.05s ease-in-out;
+  
+}
+.wsk-cp-product:hover .wsk-cp-text .category > span{
+  border-color:#ddd;
+  box-shadow: none;
+  padding: 11px 28px;
+}
+.wsk-cp-product:hover .wsk-cp-text .category{
+  margin-top: 0px;
+}
+.wsk-cp-text .title-product{
+  text-align:center;
+}
+.wsk-cp-text .title-product h3{
+  font-size:20px;
+  font-weight:bold;
+  margin:15px auto;
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  width:100%;
+}
+.wsk-cp-text .description-prod p{
+  margin:0;
+}
+/* Truncate */
+.wsk-cp-text .description-prod {
+  text-align:center;
+  width: 100%;
+  height:62px;
+  overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  margin-bottom:15px;
+}
+.card-footer{
+  padding: 25px 0 5px;
+  border-top: 1px solid #ddd;
+}
+.card-footer:after, .card-footer:before{
+  content:'';
+  display:table;
+}
+.card-footer:after{
+  clear:both;
+}
+
+.card-footer .wcf-left{
+  float:left;
+  
+}
+
+.card-footer .wcf-right{
+  float:right;
+}
+
+.price{
+  font-size:18px;
+  font-weight:bold;
+}
+
+a.buy-btn{
+  display:block;
+  color:#212121;
+  text-align:center;
+  font-size: 18px;
+  width:35px;
+  height:35px;
+  line-height:35px;
+  border-radius:50%;
+  border:1px solid #212121;
+  transition: all 0.2s ease-in-out;
+}
+a.buy-btn:hover , a.buy-btn:active, a.buy-btn:focus{
+  border-color: #FF9800;
+  background: #FF9800;
+  color: #fff;
+  text-decoration:none;
+}
+.wsk-btn{
+  display:inline-block;
+  color:#212121;
+  text-align:center;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+  border-color: #FF9800;
+  background: #FF9800;
+  padding:12px 30px;
+  border-radius:27px;
+  margin: 0 5px;
+}
+.wsk-btn:hover, .wsk-btn:focus, .wsk-btn:active{
+  text-decoration:none;
+  color:#fff;
+}  
+.red{
+  color:#F44336;
+  font-size:22px;
+  display:inline-block;
+  margin: 0 5px;
+}
+@media screen and (max-width: 991px) {
+  .wsk-cp-product{
+    margin:40px auto;
+  }
+  .wsk-cp-product .wsk-cp-img{
+  top:-40px;
+}
+.wsk-cp-product .wsk-cp-img img{
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+  .wsk-cp-product .wsk-cp-text .category > span{
+  border-color:#ddd;
+  box-shadow: none;
+  padding: 11px 28px;
+}
+.wsk-cp-product .wsk-cp-text .category{
+  margin-top: 0px;
+}
+
+}
+
+
+
+
+</style>
+</head>
+
+
+<body >
+
+  <link rel="stylesheet" href="style.css">
+  <!-- ======= Top Bar ======= -->
+<section id="topbar" class="d-flex align-items-center">
+  <div class="container d-flex justify-content-center justify-content-md-between">
+    
+
+    <div style="margin-left: 25%;" class="cta d-none d-md-flex align-items-center">
+      <a href="Sign in.html" class="scrollto">create an account</a>
+    </div>
+    <div class="cta d-none d-md-flex align-items-center">
+      <a href="Sign in.html" class="scrollto">Sign in</a>
+    </div>
+    <div class="cta d-none d-md-flex align-items-center">
+      <a href="#about" class="scrollto">Find Store</a>
+    </div>
+    <div style="margin-right: 30%;" class="cta d-none d-md-flex align-items-center">
+      <a href="arbic home page.html" class="scrollto">العربيه</a>
+    </div>
+    <div >
+      <a href="cart.html">  <img  style="margin-left: 10%;" src="conversation-svgrepo-com.svg" alt=""  width="55px" height="50px">
+      </a>
+      </div>      
+
+</section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="Home page.html"><img src="https://eg.hm.com/themes/custom/transac/alshaya_hnm/site-logo.svg?tY6kjl" alt=""></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+      
+
+  
+
+     <!---start navbar--> 
+      <nav id="navbar" class="navbar">
+        <ul>
+<li ><a style="color: #C9152E;"class="nav-link scrollto active" href="index.html">H&M Home</a></li>
+
+<!--- MEN drob dawn-->
+
+<li class="dropdown"><a href="Men.html"><span>Men</span> <i class="bi bi-chevron-down"></i></a>
+  <ul>
+    <li><a href="Men Drop down1.html">SHIRTS</a></li>
+    <li class="dropdown"><a href="Men Drop down2.html"><span>Smart Look</span> <i class="bi bi-chevron-right"></i></a>
+      <ul>
+        <li><a href="Men Drop down1.html">Deep Drop Down 1</a></li>
+        <li><a href="#">Deep Drop Down 2</a></li>
+      
+      </ul>
+    </li>
+  </ul>
+</li>   
+<!---end MEN drob dawn-->
+
+
+
+
+
+<!---kaids drob dawn-->
+
+<li class="dropdown"><a href="kaids.html"><span>Kaids</span> <i class="bi bi-chevron-down"></i></a>
+  <ul>
+    <li><a href="Kaids Drop down1.html">CLOTHING</a></li>
+    <li class="dropdown"><a href="Kaids Drop down2.html"><span>SPORTSWEAR</span> <i class="bi bi-chevron-right"></i></a>
+      <ul>
+        <li><a href="#">Deep Drop Down 1</a></li>
+        <li><a href="#">Deep Drop Down 2</a></li>
+
+      </ul>
+    </li>
+ 
+  </ul>
+</li>   
+<!---end kaids drob dawn-->
+
+
+
+
+<!---woman drob dawn-->
+
+<li class="dropdown"><a href="Woman.html"><span>Woman</span> <i class="bi bi-chevron-down"></i></a>
+  <ul>
+    <li><a href="Woman Drop down1.html">GOING OUT</a></li>
+    <li class="dropdown"><a href="Woman Drop down2.html"><span>DRESSES</span> <i class="bi bi-chevron-right"></i></a>
+      <ul>
+        <li><a href="#">Deep Drop Down 1</a></li>
+        <li><a href="#">Deep Drop Down 2</a></li>
+
+      </ul>
+    </li>
+
+  </ul>
+</li>   
+<!--- end woman drob dawn-->
+
+          <li><a class="nav-link scrollto" href="Blog & MAGAZINE.html">Blog & MAGAZINE</a></li>
+          <li><a class="nav-link scrollto" href="About us.html">About</a></li>
+
+          <li><a class="nav-link scrollto" href="conact page.html">Contact</a></li>
+        </ul>
+</nav><!-- .navbar -->
+
+  </div>
+
+
+
+ 
+  </header><!-- End Header -->
+
+    <h1 style="text-align: center;">CLOTHING</h1>
+
+    <div class="container text-center">
+      
+        
+        <div class="shell">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img">
+                    <img src="https://eg.hm.com/assets/styles/HNM/16917945/301b32cef53d0ec9fabee727db6dd6767b084699/1/image-thumb__4997137__product_listing/301b32cef53d0ec9fabee727db6dd6767b084699.jpg" alt="Product" class="img-responsive" />
+                  </div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                    </div>
+                    <div class="title-product">
+                      <h3>Regular Fit Oxford shirt</h3>
+                      
+
+
+                    </div>
+                    <div class="description-prod">
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">EGP 999.00</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://eg.hm.com/assets/styles/HNM/16735463/ee9667b43ae21633d3887b6092ed56bf8e054bc7/2/image-thumb__4901587__product_listing/ecdb4bb3ba9f7f633c163c408b4f8912b1816442.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                    </div>
+                    <div class="title-product">
+                      <h3>Regular Fit Shirt jacket</h3>
+                      
+
+                    </div>
+                    <div class="description-prod">
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">EGP 749.00</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://eg.hm.com/assets/styles/HNM/16735943/e2bc953aeaf8bce845f3050f7c5617d0c16aa4a9/2/image-thumb__4895619__product_listing/e5b98d0b101df6d93d85e5c9ca4ac854df844705.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                    </div>
+                    <div class="title-product">
+                      <h3>Regular Fit Corduroy shirt</h3>
+                      
+                    </div>
+                    <div class="description-prod">
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">EGP 749.00</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://eg.hm.com/assets/styles/HNM/16761828/e3d4558995136f3eb21b054e3cc957f3dbf49ff5/2/image-thumb__4944608__product_listing/b32c8dc0c36ba35a030ca6605f49298d24988977.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                    </div>
+                    <div class="title-product">
+                      <h3>Relaxed Fit Flannel shirt</h3>
+                      
+
+                    </div>
+                    <div class="description-prod">
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">EGP 999.00</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="shell">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img">
+                    <img src="https://eg.hm.com/assets/styles/HNM/16609006/e71118363843995c6540fa3523c83121bef672b7/2/image-thumb__4837658__product_listing/d4c46cdea2d833e806b8f0f34287eb84b1fe900b.jpg" alt="Product" class="img-responsive" />
+                  </div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                    </div>
+                    <div class="title-product">
+                      <h3>Regular Fit Oxford shirt</h3>
+                      
+
+
+                    </div>
+                    <div class="description-prod">
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">EGP 999.00</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://eg.hm.com/assets/styles/HNM/16875513/b792d36efd6a1562117c268a30867c3f486aefb6/2/image-thumb__4967438__product_listing/558af661d14fd39a96206f8d10871d8f82869916.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                    </div>
+                    <div class="title-product">
+                      <h3>Regular Fit Shirt jacket</h3>
+                      
+
+                    </div>
+                    <div class="description-prod">
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">EGP 749.00</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://eg.hm.com/assets/styles/HNM/14992183/bace4e392a5d8c08fb2a101e9f846ac4f52de752/1/image-thumb__4177838__product_listing/bace4e392a5d8c08fb2a101e9f846ac4f52de752.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                    </div>
+                    <div class="title-product">
+                      <h3>Regular Fit Corduroy shirt</h3>
+                      
+                    </div>
+                    <div class="description-prod">
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">EGP 749.00</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://eg.hm.com/assets/styles/HNM/16638093/fc4c16cf336b3508ac1843cd1287890df903a014/1/image-thumb__4849138__product_listing/fc4c16cf336b3508ac1843cd1287890df903a014.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                    </div>
+                    <div class="title-product">
+                      <h3>Relaxed Fit Flannel shirt</h3>
+                      
+
+                    </div>
+                    <div class="description-prod">
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">EGP 999.00</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+             <!-- ======= Footer ======= -->
+  <div class="d11 " style="color: black;" >
+
+    <div class="r1">
+    
+    <h6 style="font-size: large;">SHOP</h6>
+    <a style="text-decoration: underline;" href="Woman.html" target="_blank">Women</a> 
+    <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Divided</a> 
+    <a style="text-decoration: underline;" href="Men.html" target="_blank">Men</a> 
+    <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Baby</a> 
+    <a style="text-decoration: underline;" href="kaids.html" target="_blank">Kids</a> 
+    <a style="text-decoration: underline;" href="html_images.asp" target="_blank">H&M Home</a> 
+    <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Sport</a> 
+    <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Sale</a> 
+    <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Sustainability</a>  </div>
+    
+    
+    <div class="r2">
+        <h6 style="font-size: large;">CORPORATE INFO</h6>
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">About Us</a>
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Delivery Information</a>
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Terms and Conditions of Sale</a>
+        <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Website Terms & Conditions</a>
+    <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Privacy Policy</a>
+    <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Returns & Refunds</a>   </div>
+    
+    <div class="r3">
+        <h6 style="font-size: large;">CUSTOMER SERVICE</h6>
+    
+    
+    <a style="text-decoration: underline;" href="html_images.asp" target="_blank">FAQs</a>
+    <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Contact Us</a>
+    <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Connect Via WhatsApp</a>
+    <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Sitemap</a>
+    <a style="text-decoration: underline;" href="html_images.asp" target="_blank">Stores</a>
+    <a style="text-decoration: underline;" href="html_images.asp" target="_blank">H&M Home Furniture & Lighting</a>
+    <a style="text-decoration: underline;" href="html_images.asp" target="_blank">eGift Cards</a>    </div>
+    
+    <div class="r4">
+    
+        <h6 style="font-size: large;"> NEWSLETTER</h6>
+        <p>    be the first to know about our newest arrivals, special offers and store events near you.</p>  </div>
+    
+    <div class="r5">
+     <form action="/action_page.php">
+        
+            <input class="input1" type="text" id="fname" name="firstname" placeholder="enter Your Email address">
+        
+            <button class="button button3">Sugin in</button>
+         
+         
+          </form>   </div>
+
+
+
+<div class="r6">
+<p>Customer Service</p>
+<p>For Egypt 02-24803822</p>
+<p>We are open Saturday to Thursday 8 am to 9 pm & Friday 12 pm to 9 pm (Egypt local time, GMT +3)</p>
+<p></p>  </div>
+   
+    
+<div class="r7">
+
+<img src="file:///C:/Users/Almohandes.Computer/Downloads/facebook-svgrepo-com%20(1).svg" alt="" width="50px" height="50px">   
+<img src="file:///C:/Users/Almohandes.Computer/Downloads/instagram-svgrepo-com.svg" alt="" width="50px" height="50px">   
+<img src="file:///C:/Users/Almohandes.Computer/Downloads/twitter-svgrepo-com.svg" alt="" width="50px" height="50px">   </div>
+        
+<div class="r8">
+<p>© H&M's business concept is to offer fashion and quality at the best price in a sustainable way. H&M has since it was founded in 1947 grown into one of the world's leading fashion companies. The content of this site is copyright-protected and is the property of H&M Hennes & Mauritz AB.</p> </div>
+      
+  
+    </div>
+
+     <!-- ======= end Footer ======= -->
+               
+      
+
+</body>
+</html>
